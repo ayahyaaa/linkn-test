@@ -1,3 +1,27 @@
+# IF3250_2022_43_SMARTLK
+
+#### How to run
+* `cd linkn`
+* `php artisan serve`
+
+#### Requirements
+* PHP 8.x
+* Composer
+* MySQL
+
+#### Anggota Kelompok
+| NIM | Nama |
+| --- | --- |
+| 13519125 | Habibina Arif Muzayyan |
+| 13519141 | Naufal Yahya Kurnianto |
+| 13519201 | Muhammad Rayhan Ravianda |
+| 13519209 | Wilson Tandya |
+| 13519213 | Clarisa Natalia Edelin |
+
+#### <br>
+#### Laravel documentation for reference [here](https://laravel.com/docs/8.x)
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
