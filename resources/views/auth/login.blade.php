@@ -8,7 +8,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-image: url("{{ asset('img/background-image.png') }}");
+        background-image: url("{{ secure_asset('img/background-image.png') }}");
         background-repeat:  no-repeat center center fixed;
         background-size: cover;
     }
@@ -20,7 +20,7 @@
 
                 <div class="card-body">
                     <br>
-                    <img src="{{ asset('img/logo-shared-330x80.png') }}" alt="image" class="logo-arrangement">
+                    <img src="{{ secure_asset('img/logo-shared-330x80.png') }}" alt="image" class="logo-arrangement">
                     <br>
                     <br>
                     <form method="POST" action="{{ route('login') }}">

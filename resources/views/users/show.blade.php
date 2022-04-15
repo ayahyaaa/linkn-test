@@ -58,7 +58,7 @@
                     <div class="custom-pad-1"></div>
                 @endforeach
                 <div class="custom-pad"></div>
-                <img src="{{ asset('img/logo-shared-330x80.png') }}" alt="image" class="landing-logo-arrangement">
+                <img src="{{ secure_asset('img/logo-shared-330x80.png') }}" alt="image" class="landing-logo-arrangement">
             </div>
         </div>
     </div>

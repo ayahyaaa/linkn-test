@@ -3,7 +3,7 @@
 @section('content')
 <style>
     body{
-        background-image: url("{{ asset('img/background-image.png') }}"); 
+        background-image: url("{{ secure_asset('img/background-image.png') }}"); 
         background-repeat: no-repeat;
         background-size: auto;
     }

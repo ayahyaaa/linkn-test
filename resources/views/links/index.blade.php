@@ -7,7 +7,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-image: url("{{ asset('img/background-image.png') }}");
+            background-image: url("{{ secure_asset('img/background-image.png') }}");
             background-repeat:  no-repeat center center fixed;
             background-size: cover;
             overflow: auto;
