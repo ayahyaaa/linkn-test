@@ -7,10 +7,11 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-image: url("{{ secure_asset('img/background-image.png') }}");
             background-repeat:  no-repeat center center fixed;
             background-size: cover;
             overflow: auto;
+            padding:0;
+            margin:0;
         }
 </style>
 
@@ -52,7 +53,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 card" style="background-color:rgba(255, 255, 255, 0.5);border-width:4px;border-radius:10px;border-color:#F77737;">
+        <div class="col-12 card" style="background-color:rgba(255, 255, 255, 1.0);border-width:4px;border-radius:10px;border-color:#F77737;">
             <div class="card-body">
                 <table class="table">
                     <tbody>   
@@ -78,9 +79,9 @@
 <br><br>
 <div class="container">
     <div class="row">
-        <div class="col-12 card">
+        <div class="col-12 card" style="background-color:#fff">
             <div class="card-body">
-                <h2 class="card-title">Your links</h2>
+                <h2 class="card-title" style="color:black;font-weight:bold">Your links</h2>
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -103,7 +104,7 @@
                     @endforeach
                     </tbody>
                 </table>
-                <a href="/dashboard/links/new" class="btn btn-primary">Add Link</a>
+                <a href="/dashboard/links/new" class="btn btn-primary" style="background-color:#FFDC80;color:black;border-color:#FFDC80">Add Link</a>
             </div>
         </div>
     </div>

@@ -1,36 +1,23 @@
-@extends('layouts.app')
+@extends('layouts.navbar1')
 
 @section('content')
-<style>
-    body{
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("{{ secure_asset('img/background-image.png') }}");
-        background-repeat:  no-repeat center center fixed;
-        background-size: cover;
-    }
-</style>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card-login shadow card-arrangement">
+        <div class="col-md-auto">
+            <div class="card-login card-arrangement">
 
                 <div class="card-body">
                     <br>
-                    <img src="{{ secure_asset('img/logo-shared-330x80.png') }}" alt="image" class="logo-arrangement">
+                    <img src="{{ asset('img/logo-shared-330x80.png') }}" alt="image" class="logo-arrangement">
                     <br>
                     <br>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror form-border" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <div class="col-md-8 offset-md-2btn">
+                                <input id="email" style="border: 0px;" type="email" class="form-control @error('email') is-invalid @enderror form-border" placeholder="Email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -41,10 +28,9 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror form-border" name="password" required autocomplete="current-password">
+                            <div class="col-md-8 offset-md-2btn">
+                                <input id="password" style="border: 0px;" type="password" class="form-control @error('password') is-invalid @enderror form-border" placeholder="Password" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -53,21 +39,26 @@
                                 @enderror
                             </div>
                         </div>
-                        <br>
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
+                        <div class="row mb-4">
+                            <div class="offset-md-3">
+                                <div class="form-check col-md-8">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
+
+                                    @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                    @endif
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                        <div class="row mb-3">
+                            <div class="col-md-auto offset-md-2btn">
                                 <button type="submit" class="btn btn-login-register">
                                     {{ __('Login') }}
                                 </button>
@@ -77,12 +68,6 @@
                                         Sign in with Google
                                     </button>
                                 </a>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
                             </div>
 
                         </div>
