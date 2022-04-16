@@ -61,7 +61,7 @@
                                     <a class="dropdown-item" href="/dashboard/links">Dashboard</a>
                                     <a class="dropdown-item" href="/{{ Auth::user()->username }}" target="_blank" rel="nofollow">Link Page</a>
                                     <a class="dropdown-item" href="/dashboard/settings">Customization</a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item" href="/logout"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}

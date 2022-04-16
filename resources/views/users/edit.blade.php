@@ -136,7 +136,7 @@
                             <br><br>
                         </div>
                     </div>
-                    <a style="margin-left:0px;padding-left:0px"class="nav-link" href="http://127.0.0.1:8000/dashboard/links">< Back to Dashboard</a>
+                    <a style="margin-left:0px;padding-left:0px"class="nav-link" href="/dashboard/links">< Back to Dashboard</a>
                 </div>
             </div>
         </form>
